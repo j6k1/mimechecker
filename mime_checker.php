@@ -25,7 +25,7 @@ class MimeChecker {
 	{
 		if((!file_exists($filepath)) || (is_dir($filepath)))
 		{
-			return "mimeƒ^ƒCƒv‚Ì’è‹`ƒtƒ@ƒCƒ‹‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB";
+			return "mimeã‚¿ã‚¤ãƒ—ã®å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚";
 		}
 		
 		$this->data = file($filepath);
@@ -570,7 +570,7 @@ class MimeChecker {
 		);
 		$ptn = implode('|', $ptn);
 		
-		return preg_replace_callback('/\x5c(' . $ptn . ')/i', //'\\'‚Æ‹Lq‚µ‚Ä‚à³í‚É“®ì‚µ‚È‚¢‚½‚ßA\x5c‚Æ‹Lq
+		return preg_replace_callback('/\x5c(' . $ptn . ')/i', //'\\'ã¨è¨˜è¿°ã—ã¦ã‚‚æ­£å¸¸ã«å‹•ä½œã—ãªã„ãŸã‚ã€\x5cã¨è¨˜è¿°
 			create_function('$match', 'return MimeChecker::unescapesub($match[1]);'),
 			$str);
 	}
