@@ -1,4 +1,17 @@
 <?php
+/**
+ * MimeChecker
+ *
+ * @package MimeChecker - mimetype-checker
+ * @version 0.1.0-alpha
+ * @author jinpu <http://will-co21.net>
+ * @lisence The LGPL License
+ * @copyright Copyright 2012 jinpu. All rights reserved.
+ */
+
+/**
+ * The MimeTypeDefinition Class.
+ */
 class MimeTypeDefinition {
 	var $start;
 	var $type;
@@ -13,6 +26,9 @@ class MimeTypeDefinition {
 		$this->mime = $mime;
 	}
 }
+/**
+ * The MimeChecker Class.
+ */
 class MimeChecker {
 	var $data = null;
 	var $types = array();
